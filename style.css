@@ -1,0 +1,417 @@
+  @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik+Iso&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  * {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Dela Gothic One',sans-serif ;
+    font-family: 'Montsserat',sans-serif ;
+
+}
+
+:root {
+    --text-color: #118242;
+    --background-color: #F2F2F7;
+    --green--color:#AFD776;
+    --second-color: #618227;
+    
+}
+body{
+    background-color: var(--background-color);
+    }
+
+body h1 {
+    font-size: 40px;
+    margin: 4rem;
+    color: var(--text-color);
+  
+}
+body p {
+    font-size: 40px;
+    margin: 4rem;
+    color: var(--text-color);
+  
+}
+
+span {
+    color: var(--second-color);
+    font-family: Dela Gothic One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 9%;
+    background-color: var(--green--color);
+}
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-left: 4rem;
+    
+}
+
+.logo {
+    width: 10vw;
+}
+
+
+.home{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 4rem 1rem 2rem ;
+    
+    
+}
+
+ .main-home h1 {
+    color: var(--text-color);
+    font-family: Dela Gothic One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main-home p {
+    font-size: 1rem;
+    color: var(--second-color);
+}
+.main-home img {
+    width: 30vw;
+} 
+
+.reminder-marquee h1 {
+    color: #D1D1D1;
+    font-family: Dela Gothic One;
+    font-size: 45.857px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#surah{
+    display: grid;
+    grid-template-columns: repeat(3, 20fr);
+}
+
+
+.kotak {
+    
+    background-color: var(--green--color);
+    padding: 2rem 3rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    justify-content: center ;
+    border: .2rem solid var(--text-color);
+    /* text-align: justify; */
+background: #AFD776;
+box-shadow: 0px 4px 4px 0px rgba(114, 114, 114, 0.25);
+    margin: 3px;
+    
+}
+
+/* jadwal shalat */
+.card-header {
+    background-color: var(--background-color);
+}
+
+.card-header h1 {
+    margin-top: 4rem;
+color: #116536;
+font-family: Dela Gothic One;
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.card-header {
+    background-color: var(--second-color);
+    color: yellowgreen;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.table-primary th {
+    background-color: var(--text-color);
+    color: #AFD776;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.card-body {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    border: 1px solid white;
+    border-radius:5px ;
+    box-shadow: 0 2px 4px pink(0,0,0,0.1);
+
+}
+
+.table {
+    width: auto;
+    /* biar jadi sama, rapih */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table th,
+.table-td {
+    align-items: center;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 30px;
+    font-family: Montserrat;
+    
+}
+
+.table-primary td {
+    background-color: var(--green--color);
+    color: var(--text-color);
+    font-weight: bold;
+
+}
+
+.about-qoqu {
+    display: flex;
+}
+
+
+.content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 4rem 2rem 2rem ;
+    
+}
+
+.contentt h1 {
+    color: var(--text-color);
+    font-family: Dela Gothic One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contentt p {
+    color: #116536;
+font-family: Poppins;
+font-size: 21.239px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+
+.btn-alert {
+    padding: 1rem 2.8rem ;
+    background: var(--second-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--background-color);
+    font-weight: 600;
+    
+    
+    /* text-align: center;
+    align-items: center; */
+    
+}
+
+/* jadewal shalat 2*/
+
+.card-header-2 {
+    background-color: var(--background-color);
+    
+}
+
+.card-header-2 h1 {
+    color: var(--text-color);
+    align-items: center;
+    text-align: center;
+    font-family: Dela Gothic One;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card-header-2 p {
+
+    text-align: center;
+    align-items: center;
+    font-family: Montserrat;
+    text-align: center;
+    padding: 20px;
+    color: #F2F2F6;
+    border-radius: 34.5px;
+    background: #118242;
+    font-size: 21px;
+
+}
+
+    
+/* surah CSS */
+
+.surah {
+    text-align: center;
+    align-items: center;
+    color: #116536;
+font-family: Dela Gothic One;
+font-size: 80px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* responsive */
+@media(max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% ;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .service{
+        padding-bottom: 7rem;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media(max-width: 768px) {
+#menu-icon{
+    /* display: block bikin jd dibawah portfolio */
+    display: block;
+}
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 80%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0,0,0,0.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+    display: none;
+}
+
+.navbar.active {
+    display: block;
+}
+
+.navbar a {
+    /* display: block; agar ke bawah*/
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+
+.home {
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.home-content h3 {
+    font-size: 2.6rem;
+}
+
+.home-content h1 {
+    font-size: 5rem;
+}
+
+.home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+}
+
+.about{
+    flex-direction: column-reverse;
+}
+
+.about img {
+    width: 70vw;
+}
+
+.service h2{
+    margin-bottom: 3rem;
+}
+
+.portfolio h2{
+    margin-bottom: 3rem;
+}
+
+.portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media(max-width: 617px) {
+.portfolio-container {
+grid-template-columns: 1fr;    
+} 
+}
+
+@media(max-width:450px) {
+.home-img img {
+    width: 90vw;
+}
+
+.about-img img {
+    width: 90vw;
+}
+
+.footer{
+    flex-direction: column-reverse;
+}
+
+/* agar tidak nambrak untuk button backnya */
+.footer p {
+    text-align: center;
+    margin-top: 2rem;
+}
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asmahul-husna</title>
+  </head>
+  <body>
+    <div id="asmahul-husna"></div>
+
+    <script>
+        window.onload = function() {
+            getData();
+
+        }
+
+        //code minta data
+        function getData() {
+            fetch('https://api.banghasan.com/quran/format/json/surat')
+            .then(function(response){
+                if (!response.ok) {
+                    throw new Error('Gagal Mengambil Data');
+                }
+                return response.json();
+            })
+            .then(function(data){
+                displayData(data);
+            })
+            .catch(function(error){
+                console.log("Terjadi Kesalahan", error);
+            })
+        }
+
+
+        function displayData(data) { 
+            var resultDiv = document.getElementById('asmahul-husna');
+            resultDiv.innerHTML = "";
+
+            data.hasil.forEach(function(surah) {
+                var surahDiv = document.createElement('div');
+                surahDiv.classList.add('kotak');
+
+                var namaAsma = document.createElement('p');
+                namaAsma.textContent = surah.asma;
+                
+                surahDiv.appendChild(namaAsma);
+                surahDiv.appendChild(namaType);
+
+                resultDiv.appendChild(surahDiv);
+            })
+
+        }
+    </script>
+  </body>
+</html>

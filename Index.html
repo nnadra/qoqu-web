@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik+Iso&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>Muslim-web</title>
+</head>
+
+<body>
+    
+    <header class="header"> 
+        <a href="#" class="logo"><img src="images/qoqu-logo.png" alt="logo-qur'an"></a>
+        <i class='bx-menu-alt-left' id="menu-icon" style="color: aquamarine;"></i>
+        <nav class="navbar">
+        <a href="jadewal-shalat.html">Jadwal Shalat</a>
+        <a href="asmahul-husna.html">Asmahul Husna</a>
+        <a href="list-surah.html">Surah</a>
+    </nav>
+</header>
+<section class="home">
+    <div class="main-home">
+        <h1>BE GOOD MUSLIM <br>WITH QOQU</h1>
+        <P>menyediakan layanan yang dapat membantu anda menjadi good muslim</P>
+        </div>
+        <div class="home-img">
+            <img src="images/masjid-3d.png" alt="masjid-3d">
+        </div>
+
+        
+    
+</section>
+<section class="marquee">
+    <div class="reminder-marquee">
+        <div> <marquee behavior="" direction="">
+            <h1>Don't Forget to read Qur'an </h1>  
+            
+        </marquee>
+    </div>
+</section>
+
+<section class="second-page">
+    <div class="content">
+        <img src="images/qoqu.png" alt="">
+        <div class="contentt">
+        <h1>With <span>QOQU</span> <br>you can be <span>better</span></h1>
+        <p>Jalani hari bersama qoqu, bersihkan hati dengan selalu mengingat Allah dimanapun anda berada. QUQO dapat membantu anda untuk menjadi lebih baik.</p>
+       <div><button class="btn-alert" onclick="FirstFunction()">QoQu</button></div>
+    </div>
+  </div>
+   
+ 
+
+    
+</section>
+
+<script>
+    function FirstFunction() {
+        alert("LET'S READ QURAN WITH QOQU")
+    }
+    let menuIcon = document.querySelector('#menu-icon')
+let navbar = document.querySelector('.navbar')
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x')
+    navbar.classList.toggle('active')
+}
+
+window.onscroll = () => {
+    menuIcon.classList.remove('bx-x')
+    navbar.classList.remove('active')
+}
+</script>
+
+</body>
+</html>

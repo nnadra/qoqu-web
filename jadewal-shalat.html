@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadewal Shalat</title>
+</head>
+<body>
+    <section class="jadwal-shalat">
+        <div class="container">
+            <div class="card">
+                <div class="card-header-2">
+                    <h1>Jadwal Shalat</h1>
+                    <div class="card-header-p2">
+                    <p>Kota/Lokasi : <strong id="city"></strong></p>
+                    <p>Provinsi/Daerah <strong id="prov"></strong></p>
+                </div></div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>Tanggal</th>
+                                    <th>Imsak</th>
+                                    <th>Subuh</th>
+                                    <th>Terbit</th>
+                                    <th>Dzuhur</th>
+                                    <th>Ashar</th>
+                                    <th>Maghrib</th>
+                                    <th>Isya</th>  
+                                </tr> 
+                            </thead>
+                            <tbody id="list-jadwal"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const city = 1222;
+        const date = new Date();
+        //padStart biar ada 0 nya di awal exp: 04/04/23
+        const dd = String(date.getDate()).padStart(2,"0");
+        const mm = String(date.getMonth()+ 1).padStart(2,"0");
+        const yyyy = date.getFullYear();
+        console.log(yyyy);
+        const now = yyyy + "-" + mm + "-"+ dd;
+
+        const JadwalApi = `https://api.myquran.com/v1/sholat/jadwal/${city}/${yyyy}/${mm}`;
+
+        fetch(JadwalApi)
+        .then(function(response){
+            if (!response.ok) {
+                throw new Error("Apaan tuh yang salah")
+            } return response.json();
+        })
+        .then((data) => {
+            // console.log(data);
+            const jadwal = data.data;
+            const list = jadwal.jadwal;
+            const listJadwal = document.getElementById("list-jadwal");
+            const kota = document.getElementById("city");
+            const prov = document.getElementById("prov");
+
+            kota.innerHTML = jadwal.lokasi;
+            prov.innerHTML = jadwal.daerah;
+
+            list.forEach(el => {
+                const tr = document.createElement("tr");
+                if(el.date === now) {
+                    tr.classList.add("table-primary")
+                }
+
+                const dd = document.createElement("td");
+                dd.innerText = el.tanggal;
+
+                const imsak = document.createElement("td");
+                imsak.innerText = el.imsak;
+                
+                const terbit = document.createElement("td");
+                terbit.innerHTML = el.terbit;
+                
+                const subuh = document.createElement("td");
+                subuh.innerHTML = el.subuh;
+
+                const dzuhur = document.createElement("td");
+                dzuhur.innerHTML = el.dzuhur;
+
+                
+                const ashar = document.createElement("td");
+                ashar.innerHTML = el.ashar;
+
+                
+                const maghrib = document.createElement("td");
+                maghrib.innerHTML = el.maghrib;
+
+                const isya = document.createElement("td");
+                isya.innerHTML = el.isya;
+
+                
+
+
+                listJadwal.appendChild(tr);
+                tr.appendChild(dd);
+                tr.appendChild(imsak);
+                tr.appendChild(terbit);
+                tr.appendChild(subuh);
+                tr.appendChild(dzuhur);
+                tr.appendChild(ashar);
+                tr.appendChild(maghrib);
+                tr.appendChild(isya);
+
+                
+            });
+
+
+        })
+
+    </script>
+
+</body>
+</html>
